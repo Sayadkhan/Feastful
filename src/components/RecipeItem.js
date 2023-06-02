@@ -32,7 +32,7 @@ const RecipeItem = ({ saveHandler, savedItems }) => {
         })
         .catch((err) => setErrorMsg(err.message));
     }, 500);
-  }, []);
+  }, [id, savedItems]);
 
   const timeFormatter = (time) => {
     if (!time) return;
