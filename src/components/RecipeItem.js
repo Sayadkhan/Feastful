@@ -49,7 +49,7 @@ const RecipeItem = ({ saveHandler, savedItems }) => {
   useEffect(() => {
     if (!recipe) return;
     setHasBeenSaved(savedItems.some((item) => item.id === recipe.id));
-  }, [recipe]);
+  }, [savedItems, recipe]);
 
   return (
     <>
@@ -109,7 +109,7 @@ const RecipeItem = ({ saveHandler, savedItems }) => {
               </button>
               <a
                 href={recipe.source_url}
-                target="_blank"
+                target="blank"
                 className="bg-sky-400 text-sky-50 p-3 px-8 rounded-full uppercase shadow-lg shadow-sky-200 hover:bg-gray-600 hover:text-gray-50 hover:shadow-gray-300 duration-300"
               >
                 Get Directions
